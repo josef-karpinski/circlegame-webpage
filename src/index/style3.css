@@ -1,0 +1,157 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	display:block;
+	font-family: monospace;
+}
+
+
+nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #6495ED;
+	width: 100%;
+	height: 73px;
+	border-bottom: 1px black solid;
+	z-index: 100;
+	overflow: hidden;
+}
+nav img{
+	position: fixed;
+	top: 2px;
+	left: 2px;
+	height: 70px;
+	width: 70px;
+	display: inline-block;
+}
+nav h1{
+	position: fixed;
+	top: -25px;
+	left: 75px;
+	font-family: Inconsolata;
+	font-weight: 400;
+	font-size: 50px;
+}
+nav a{
+	font-size: 25px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	display: inline;
+	margin-left: 100px;
+	left: 32.5%;
+	top: 33%;
+	padding: 3px 7px;
+	border-radius: 7px;
+	overflow: hidden;
+}
+nav a.active{
+	background-color: #38578f;
+	color: white;
+}
+nav a.tab{
+	color: #223352;
+	transition: background-color 0.2s linear;
+	transition: color 0.1s linear;
+}
+nav a.tab:hover{
+	background-color: #4569a8;
+	color: #d1e2ff;
+}
+
+#video-section{
+	margin-top: 73px;
+	position: relative;
+	width: 1;
+	border-bottom: 1px black solid;
+	background-color: #D1DAE6;
+  }
+
+#video-section video {
+	border-right: 2px solid black;
+	border-left: 2px solid black;
+	max-height: 100%;
+	display: block;
+	margin: auto;
+  }
+
+
+#video-section button{
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%);
+	width: 15%;
+	height: 12%;
+	font-size: 2vw;
+	color: white;
+	background-color: #2c4a7a;
+	transition: background-color 0.2s linear;
+	border:none;
+	border-radius: 10px;
+	font-family: Inconsolata;
+}
+
+#video-section .title{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 10vw;
+	font-family: Inconsolata;
+
+  
+}
+
+#video-section button:hover{
+	background-color: #6495ED;
+}
+
+#about-section{
+	display:block;
+}
+
+.about-section-box-container{
+	width: 100%;
+	height: fit-content;
+	margin-top: 75px;
+	margin-bottom: 150px;
+}
+
+.about-section-box-container .about-section-box-left{
+	background-color: AliceBlue;
+	border: solid;
+	border-width: 1px;
+	border-color: CornflowerBlue;
+	margin-left: 10%;
+	margin-right: 40%;
+	padding: 0px 17px 5px 17px;
+	border-radius: 25px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+.about-section-box-container .about-section-box-right{
+	background-color: AliceBlue;
+	border: solid;
+	border-width: 1px;
+	border-color: CornflowerBlue;
+	margin-left: 40%;
+	margin-right: 10%;
+	padding: 0px 17px 5px 17px;
+	border-radius: 25px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+#about-section h1{
+	text-align: center;
+	font-size: 2.5vw;
+}
+
+#about-section hr{
+	
+}
+
+#about-section p{
+	font-size: 1.2vw;
+}

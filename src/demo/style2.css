@@ -1,0 +1,111 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #D1DAE6;
+  display:block;
+  font-family: monospace;
+}
+
+.topnav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #6495ED;
+  width: 100%;
+  height: 73px;
+  border-bottom: 1px black solid;
+  z-index: 100;
+  overflow: hidden;
+}
+.topnav img{
+  position: fixed;
+  top: 2px;
+  left 2px;
+  height: 70px;
+  width: 70px;
+  display: inline-block;
+}
+.topnav h1{
+  position: fixed;
+  top: -25px;
+  left: 75px;
+  font-family: Inconsolata;
+  font-weight: 400;
+  font-size: 50px;
+}
+.topnav a{
+  font-size: 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  margin-left: 100px;
+  left: 32.5%;
+  top: 33%;
+  padding: 3px 7px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.topnav a.active{
+  background-color: #38578f;
+  color: white;
+}
+.topnav a.tab{
+  color: #223352;
+  transition: background-color 0.2s linear;
+  transition: color 0.1s linear;
+}
+.topnav a.tab:hover{
+  background-color: #4569a8;
+  color: #d1e2ff;
+}
+
+.sketch{
+  border: 1px solid black;
+  width: 800px;
+  height: 600px;
+  display:ck;
+  margin: auto;
+    
+}
+
+.disclaimer{
+  width: 700px;
+  display:block;
+  margin: auto;
+  margin-top: 103px;
+  margin-bottom: 30px;
+}
+
+.disclaimer .header{
+  font-size: 35px;
+}
+
+.disclaimer .note{
+  font-size: 20px
+}
+
+.disclaimer button{
+  display:block;
+  margin: auto;
+  margin-top: 15px;
+  width: 150px;
+  height: 60px;
+  font-size: 25px;
+  color: white;
+  background-color: black;
+  transition: background-color 0.5s linear;
+  border:none;
+  border-radius: 10px;
+}
+
+.disclaimer button:hover{
+  background-color: #6495ED;
+}
+
+.disclaimer a{
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-top: 3px;
+}
