@@ -1,0 +1,16 @@
+Installing Circlegame is fairly easy and only takes a few minutes to complete.
+
+First, you must head to the Circlegame <a href="https://www.mediafire.com/file/cop3czb7pqy3mtb/circlegame_v1.2.0.zip/file" target="_blank">download page</a> on Mediafire.
+
+Next, in the black box labeled "circlegame_v1.2.0", click on the blue download button labeled "DOWNLOAD (169.8MB)".
+
+Once the download is complete, you should see a circlegame_v1.2.0.zip file in your system's downloads folder.
+
+The final step is to right click on this file and click "Extract All".
+
+Once complete, the extracted folder should appear with the Circlegame application inside of it.
+
+For ease of use, we recommend that you create a desktop shortcut to the application, or even pin it to your taskbar!
+
+
+Note: Circlegame is only available on Windows OS.
