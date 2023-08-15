@@ -6,7 +6,7 @@ html, body {
   font-family: monospace;
 }
 
-.topnav{
+nav{
   position: fixed;
   top: 0;
   left: 0;
@@ -17,23 +17,23 @@ html, body {
   z-index: 100;
   overflow: hidden;
 }
-.topnav img{
+nav img{
   position: fixed;
   top: 2px;
-  left 2px;
+  left: 2px;
   height: 70px;
   width: 70px;
   display: inline-block;
 }
-.topnav h1{
+nav h1{
   position: fixed;
-  top: -25px;
+  top: -35px;
   left: 75px;
   font-family: Inconsolata;
   font-weight: 400;
   font-size: 50px;
 }
-.topnav a{
+nav a{
   font-size: 25px;
   position: relative;
   text-align: center;
@@ -46,16 +46,16 @@ html, body {
   border-radius: 7px;
   overflow: hidden;
 }
-.topnav a.active{
+nav a.active{
   background-color: #38578f;
   color: white;
 }
-.topnav a.tab{
+nav a.tab{
   color: #223352;
   transition: background-color 0.2s linear;
   transition: color 0.1s linear;
 }
-.topnav a.tab:hover{
+nav a.tab:hover{
   background-color: #4569a8;
   color: #d1e2ff;
 }
