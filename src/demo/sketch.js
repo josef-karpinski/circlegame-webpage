@@ -12,6 +12,8 @@ var gridshotCoords_y = [100, 200, 300, 400, 500];
 //declare objects in setup else errors occur
 var gridshotButton;
 var circlefallButton;
+var mainmenuButton;
+var resetgameButton;
 var circles = [];
 
 var frames = 0;
@@ -40,6 +42,8 @@ function setup() {
   textFont(font);
   circlefallButton = new Button(400, 245, 270, 100, 7, "Circlefall", color(0, 174, 255));
   gridshotButton = new Button(400, 400, 270, 100, 7, "Gridshot", color(255, 33, 33));
+  mainmenuButton = new Button(553, 420, 200, 80, 7, "Main Menu", color(0));
+  resetgameButton = new Button(247, 420, 200, 80, 7, "Restart", color(0));
 }
 
 function draw() {
@@ -48,6 +52,7 @@ function draw() {
   drawMainMenu();
   playCirclefall();
   playGridshot();
+  drawEndGame();
   textAlign(LEFT);
   textSize(10);
   text(int(frameRate()), 780, 20);
@@ -66,6 +71,17 @@ function mousePressed() {
         circles.push(new Circle("gridshot"));
       }
     }
+  }
+  else if(endgame){
+	if(mainmenuButton.isHoveringButton()){
+		resetGame();
+		endgame = false;
+		mainMenu = true;
+	}
+	else if(resetgameButton.isHoveringButton()){
+		endgame = false;
+		resetLastGame(lastgame);
+	}
   }
   else if(circlefall && !gamePaused){
     totalClicks++;
@@ -130,7 +146,7 @@ function playCirclefall() {
       if(frameCount%16 == 0 && circles.length < 100){
         circles.push(new Circle("circlefall"))
       }
-      if(totalHit + totalMissed >= 100){
+      if(totalHit + totalMissed >= 1){
         circlefall = false;
         endgame = true;
       }
@@ -197,6 +213,21 @@ function resetLastGame(game){
       circles.push(new Circle("gridshot"));
     }    
   }
+}
+
+function drawEndGame(){
+	if(endgame && lastGame == "circlefall"){
+		textAlign(CENTER);
+		textSize(40);
+		fill(176,196,222);
+		stroke(0);
+		rect(400, 300, 700, 500, 50);
+		noStroke();
+		fill(0);
+		text("Game Over", 400, 100);
+		mainmenuButton.drawButton();
+		resetgameButton.drawButton();
+	}
 }
 
 
