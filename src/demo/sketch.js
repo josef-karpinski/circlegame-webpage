@@ -56,6 +56,12 @@ function draw() {
   textAlign(LEFT);
   textSize(10);
   text(int(frameRate()), 780, 20);
+  //outline around sketch
+  stroke(0);
+  line(0, 0, 800, 0);
+  line(0, 0, 0, 600);
+  line(800, 0, 800, 600);
+  line(0, 600, 800, 600);
 }
 
 function mousePressed() {
@@ -80,7 +86,7 @@ function mousePressed() {
 	}
 	else if(resetgameButton.isHoveringButton()){
 		endgame = false;
-		resetLastGame(lastgame);
+		resetLastGame(lastGame);
 	}
   }
   else if(circlefall && !gamePaused){
@@ -126,7 +132,7 @@ function drawMainMenu() {
     textAlign(LEFT);
     textSize(15);
     fill(0);
-    text("WEB DEMO\n(download for access to the full game)", 5, 580);
+    text("WEB DEMO\n(download for access to the full game)", 5, 575);
   }
 }
 
@@ -146,7 +152,7 @@ function playCirclefall() {
       if(frameCount%16 == 0 && circles.length < 100){
         circles.push(new Circle("circlefall"))
       }
-      if(totalHit + totalMissed >= 1){
+      if(totalHit + totalMissed >= 100){
         circlefall = false;
         endgame = true;
       }
@@ -162,6 +168,16 @@ function playGridshot() {
     }
     gameTimer();
     drawPauseMenu();
+	fill(0);
+	textSize(25);
+	textAlign(LEFT);
+	text("Hits: " + totalHit, 10, 25);
+	text("Misclicks: " + (totalClicks - totalHit), 10, 60);
+	text("Timer: " + timer, 10, 95);
+	if(timer > 29){
+		gridshot = false;
+		endgame = true;
+	}
   }
 }
 
@@ -216,17 +232,31 @@ function resetLastGame(game){
 }
 
 function drawEndGame(){
-	if(endgame && lastGame == "circlefall"){
-		textAlign(CENTER);
+	if(endgame){
+	    textAlign(CENTER);
 		textSize(40);
 		fill(176,196,222);
-		stroke(0);
+		stroke(75, 88, 105);
 		rect(400, 300, 700, 500, 50);
 		noStroke();
 		fill(0);
 		text("Game Over", 400, 100);
 		mainmenuButton.drawButton();
 		resetgameButton.drawButton();
+		if(lastGame == "circlefall"){
+			textSize(35);
+			textAlign(LEFT);
+			fill(0);
+			text("Hits: " + totalHit, 170, 250);
+			text("Misses: " + totalMissed, 450, 250);
+		}
+		else if(lastGame == "gridshot"){
+			textSize(35);
+			textAlign(LEFT);
+			fill(0);
+			text("Hits: " + totalHit, 170, 250);
+			text("Misclicks: " + (totalClicks - totalHit), 450, 250);
+		}
 	}
 }
 
